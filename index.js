@@ -226,7 +226,7 @@ export default class ModalSelector extends React.Component {
               activeOpacity={this.props.touchableActiveOpacity}
               accessible={this.props.listItemAccessible}
               accessibilityLabel={option.accessibilityLabel || undefined}
-              importantForAccessibility={isFirstItem}
+              importantForAccessibility={isFirstItem ? 'yes' : 'auto'}
               {...this.props.passThruProps}
             >
                 <View style={[styles.optionStyle, this.props.optionStyle, isLastItem && {borderBottomWidth: 0}]}>
